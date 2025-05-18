@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IContact } from "../../../types/contact";
+import { IContact } from "../types/contact";
 
 const ContactSchema = new mongoose.Schema<IContact>({
   fullName: { type: String, required: true },
