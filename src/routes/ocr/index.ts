@@ -143,12 +143,8 @@
 
 // export default router;
 import express from "express";
-import multer from "multer";
-import { handleOCR } from "../../controllers/ocrController";
+import { handleBase64OCR } from "../../controllers/ocrController";
 
 const router = express.Router();
-const upload = multer({ dest: "uploads/" });
-
-router.post("/", upload.single("file"), handleOCR);
-
+router.post("/", handleBase64OCR);
 export default router;

@@ -11,6 +11,7 @@ import contactsRoutes from "./routes/contacts/index";
 import contactIdRoutes from "./routes/contacts/[id]";
 import playgroundRoutes from "./routes/playground/index";
 import ocrRoutes from "./routes/ocr/index";
+import ocrExtractRoutes from "./routes/ocrExtract/index";
 
 dotenv.config();
 
@@ -22,7 +23,10 @@ const MONGO_URI = process.env.MONGO_URI || "";
 app.use(cors());
 
 // Parse incoming JSON
-app.use(express.json());
+// app.use(express.json());
+// ✅ Must be before your routes
+app.use(express.json({ limit: "20mb" }));
+app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 
 // ✅ Request + Response Logger Middleware
 app.use((req, res, next) => {
@@ -64,6 +68,7 @@ app.use("/api/contacts", contactIdRoutes); // GET /:id, PUT, DELETE
 app.use("/api/user", userRoutes);
 app.use("/api/playground", playgroundRoutes); // /status, /env, /system, /db
 app.use("/api/ocr", ocrRoutes);
+app.use("/api/ocrExtract", ocrExtractRoutes);
 
 // 🔍 Get local IP for network URL
 function getLocalIP(): string {
