@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IContact } from "../types/contact";
+import { IContact } from "../@types/contact";
 
 const ContactSchema = new mongoose.Schema<IContact>({
   fullName: { type: String, required: true },
@@ -17,4 +17,4 @@ const ContactSchema = new mongoose.Schema<IContact>({
   scannedAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.model<IContact>("Contact", ContactSchema);
+export default mongoose.model<IContact>("Contacts", ContactSchema);

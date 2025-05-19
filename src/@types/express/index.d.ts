@@ -14,3 +14,8 @@ declare global {
 }
 
 export {};
+
+import { Request, Response } from "express";
+
+// Generic Express handler that returns a Promise<void>
+export type ExpressHandler = (req: any, res: any) => Promise<any>;
