@@ -1,6 +1,5 @@
 
 
-```markdown
 # 🧠 Card Vault – Backend (Node.js + TypeScript + OCR + MongoDB)
 
 This is the backend service for **Card Vault**, a cross-platform app that scans business cards, performs OCR, and extracts structured contact information using regex and/or AI. Built with **Node.js, Express, TypeScript, MongoDB, Tesseract.js**, and `sharp`.
