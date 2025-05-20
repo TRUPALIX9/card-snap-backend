@@ -172,7 +172,7 @@ src/@types/
 
 ```env
 PORT=5091
-MONGO_URI=mongodb+srv://projectUser:ConnectTrueDbProject@cluster.mongodb.net/cardvault
+MONGO_URI=mongodb+srv://<Cluter>
 HUGGINGFACE_API_KEY=your_api_key_here
 ```
 
