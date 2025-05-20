@@ -1,8 +1,4 @@
-Thanks, Trupal. Based on your full backend file structure (`card-snap-backend`), here’s a tailored and complete `README.md` for your **Node.js + TypeScript + MongoDB + OCR backend**, aligned with your architecture:
 
----
-
-### ✅ Save this as `README.md` in the `card-snap-backend` folder:
 
 ```markdown
 # 🧠 Card Vault – Backend (Node.js + TypeScript + OCR + MongoDB)
